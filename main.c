@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include "file_operator.h"
-#include "win_kit.h"
-#include "list.h"
+#include "include/win_kit.h"
 #include "include/bit_kits.h"
 
 int main(void)

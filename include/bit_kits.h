@@ -78,7 +78,6 @@
  * __get_bit_mask_from_pos__   -   get the specify bit mask by position
  * @pos: position, where you want to set 1 from bits
  *
- * 获得特定位的掩码
  */
 #define __get_bit_mask_from_pos__(pos) \
     ((0x1) << ((pos) - 1))
@@ -91,7 +90,6 @@
  * @op_number: operating number
  * @pos: position, like MASK_BIT_POS_1
  *
- * 获取一个操作数的特定位的比特值
  */
 #define __get_bit_from_pos__(op_number, pos) \
     (((op_number) & (pos)) ? 1 : 0)
@@ -103,7 +101,6 @@
  * @op_number: operating number
  * @pos: position, like MASK_BIT_POS_1
  *
- * 将一个操作数的特定位置为 1
  */
 #define __set_bit_from_pos__(op_number, pos) \
     ((op_number) | (pos))
@@ -114,7 +111,6 @@
  * @op_number: operating number
  * @pos: position, like MASK_BIT_POS_1
  *
- * 将一个操作数的特定位置为 0
  */
 #define __clr_bit_from_pos__(op_number, pos) \
     ((op_number) & (~(pos)))
