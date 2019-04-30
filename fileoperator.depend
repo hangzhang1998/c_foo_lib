@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1556605259 source:c:\users\uka\desktop\fileoperator\main.c
+	<stdio.h>
+	"file_operator.h"
+	"win_kit.h"
+	"list.h"
+	"include/bit_kits.h"
+
+1556603067 c:\users\uka\desktop\fileoperator\file_operator.h
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	"alloc_kits.h"
+	"list.h"
+
+1556184267 c:\users\uka\desktop\fileoperator\win_kit.h
+	<stdio.h>
+
+1555084655 c:\users\uka\desktop\fileoperator\list.h
+
+1556204020 c:\users\uka\desktop\fileoperator\alloc_kits.h
+	<stdio.h>
+	<stdlib.h>
+
+1556607403 c:\users\uka\desktop\fileoperator\include\bit_kits.h
+
