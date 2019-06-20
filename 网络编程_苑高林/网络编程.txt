@@ -1,0 +1,41 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+
+
+
+
+①创建网络端点:
+listenfd=socket(AF_INET,SOCK_STREAM,0)
+    ②绑定端口：
+bind(listenfd,(struct sockaddr *)&server,sizeof(struct sockaddr)
+ ③监听端口：
+listen(listenfd,BACKLOG)
+ ④接受客户端连接:
+connectfd=accept(listenfd,(struct sockaddr *)&client,&sin_size)
+ ⑤TCP多进程并发服务器实现并发：
+
+if((pid=fork())>0)
+{
+close(connectfd); //父进程在运行
+continue;
+}
+else if(pid==0)
+{
+close(listenfd);
+process_client(connectfd,client);  //子进程在运行
+exit(0);
+}
+else
+{
+perror("Fork error\n");
+exit(1);
+}
+ 
+
